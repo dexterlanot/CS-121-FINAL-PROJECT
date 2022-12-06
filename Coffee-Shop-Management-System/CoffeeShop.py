@@ -27,6 +27,7 @@ class CoffeeShop:
             try: choice = int(input("Enter your choice -> "))
             except ValueError:
                 print("Invalid input!")
+                continue
                 
             if choice == 1:
                 admin = Employees.Employee()
