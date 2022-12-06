@@ -1,0 +1,42 @@
+{
+    "21-09401": {
+        "Employee ID": "21-09401",
+        "Password": "manager",
+        "Job": "Manager",
+        "Name": "John Dexter Lanot",
+        "Stage name" : "Dex",
+        "Age": "19",
+        "Gender": "Male",
+        "Contact Number": "09954894362"
+    },
+    "21-08848": {
+        "Employee ID": "21-08848",
+        "Password": "barista",
+        "Job": "Barista",
+        "Name": "Whayne Ilao",
+        "Stage name" : "Whayne",
+        "Age": "19",
+        "Gender": "Female",
+        "Contact Number": "09954894362"
+    },
+    "21-05676": {
+        "Employee ID": "21-05676",
+        "Password": "crew",
+        "Job": "Service Crew",
+        "Name": "Yeleina Lagajeno",
+        "Stage name" : "Yel",
+        "Age": "19",
+        "Gender": "Female",
+        "Contact Number": "09954894362"
+    },
+    "21-09603": {
+        "Employee ID": "21-09603",
+        "Password": "cashier",
+        "Job": "Cashier",
+        "Name": "Ivy Nicole Pagcaliwagan",
+        "Stage name" : "Ivy",
+        "Age": "19",
+        "Gender": "Female",
+        "Contact Number": "09954894362"
+    }
+}
