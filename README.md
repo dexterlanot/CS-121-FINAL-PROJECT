@@ -17,7 +17,7 @@ Final Project in CS 121 - Advanced Computer Programming
 
 ## General Information
 
-Because of the current need for instant coffee or tea, the programmers chose to create a shopping business system that relates to the shop's day-to-day operations. This system was created with the Python programming language and Object-Oriented Programming (OOP) concepts. Encapsulation and inheritance are specifically employed in the software. In addition, the programmers employed JSON to store employee data, which are retrieved upon logging in, and file handling to keep each shop order information.
+Because of the current demand for instant coffee or tea, the programmers decided to develop a shopping business system that is related to the shop's day-to-day operations. The Python programming language and Object-Oriented Programming (OOP) concepts were used to create this system. In software, encapsulation and inheritance are used specifically. Furthermore, the programmers used JSON to store employee data, which is retrieved upon logging in, and file handling to keep track of each shop order.
 
 ## Admin Interface
 
