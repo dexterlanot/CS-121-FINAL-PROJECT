@@ -142,3 +142,4 @@ class Cashier(Employee):
         
     def print_bill(self):
         billing.print_reciept()
+
