@@ -6,9 +6,14 @@ Final Project in CS 121 - Advanced Computer Programming
 
 **Group Members**
 1. Ilao, Whayne Darlyne
+- [@whayneilao](https://www.github.com/whayneilao)
 2. Lagajeno, Yeleina
+- [@Yeleina](https://www.github.com/Yeleina)
 3. Lanot, John Dexter
+- [@dexterlanot](https://www.github.com/dexterlanot)
 4. Pagcaliwagan, Ivy Nicole
+- [@ivynicole](https://www.github.com/ivynicole)
+
 
 ## General Information
 
