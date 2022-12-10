@@ -59,7 +59,7 @@ class Employee:
                 print("-"*60)
 
                 try:
-                    choice = int(input("Enter your choice: "))
+                    choice = int(input("Enter your choice -> "))
                 except ValueError:
                     print("Invalid input!")
                     pass
@@ -151,7 +151,7 @@ class Manager(Employee):
             print("-"*60)
 
             try:
-                self.manager_choice = int(input("Enter your choice: "))
+                self.manager_choice = int(input("Enter your choice -> "))
             except ValueError:
                 print("Invalid input!")
                 continue
@@ -212,7 +212,7 @@ class ServiceCrew(Employee):
         json_file.close
 
     def assist_to_cashier(self):
-        print("While waiting, please pay for your orders.")
+        print("Crew: \"While waiting, please pay for your orders.\"")
         print("-"*60)
 
 

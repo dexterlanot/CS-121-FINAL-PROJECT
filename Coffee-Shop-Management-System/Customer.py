@@ -33,7 +33,7 @@ class Customer:
             print("-"*60)
             print("[1] - Order")
             print("[2] - Pay order")
-            print("[3] - Cancel order/s")
+            print("[3] - Cancel order")
             print("[4] - Exit")
             print("-"*60)
 

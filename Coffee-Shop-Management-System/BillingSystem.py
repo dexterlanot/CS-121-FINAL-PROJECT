@@ -18,7 +18,7 @@ class Billing:
     def payment_and_billing(self):
         bill = Billing()
         while True:
-            order.print_orders
+            order.print_orders()
 
             if order.total_amount() == 0:
                 print("You don't have any orders.\n")
@@ -31,16 +31,19 @@ class Billing:
                 break
 
     def total_payment(self):
-        bill = Billing()
-        self.payment = bill.customer_money()
-        if order.total_amount() > self.payment:
-            print("Sorry. Your money is not enough to pay for the orders.")
-        else:
-            self.total_to_pay = 0
-            self.total_to_pay = self.total_to_pay + order.total_amount()
-            self.change = 0
-            self.change = self.payment - self.total_to_pay
-            print(f"Your change is P {self.change}")
+        while True:
+            bill = Billing()
+            self.payment = bill.customer_money()
+            if order.total_amount() > self.payment:
+                print("Sorry. Your money is not enough to pay for the orders.")
+                break
+            else:
+                self.total_to_pay = 0
+                self.total_to_pay = self.total_to_pay + order.total_amount()
+                self.change = 0
+                self.change = self.payment - self.total_to_pay
+                print(f"Your change is P {self.change}")
+                break
 
     def print_reciept(self):
         customer.customer_name_input()
