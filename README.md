@@ -15,7 +15,7 @@ Final Project in CS 121 - Advanced Computer Programming
 
 ## Self Assesment
 
-Based on the given rubric for grading, the group assesed the system and it resulted to this:
+The group evaluated the system using the provided grading rubric, which resulted in the following:
 
 | Metric             	| 4 	| 3 	| 2 	| 1 	|
 |--------------------	|---	|---	|---	|---	|
@@ -40,7 +40,9 @@ Make sure you have installed maskpass before you use the system.
 ### Installation
 Use the package manager pip to install maskpass.
 
-```pip install maskpass```
+```
+pip install maskpass
+```
 
 # General Information
 ### Admin Interface
