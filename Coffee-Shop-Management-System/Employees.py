@@ -36,9 +36,6 @@ class Employee:
             print("Wrong employee login details!\n")
             return False
 
-    def introduce(self):
-        print(f"My name is {self.name}.")
-
     def show_admin_menu(self):
         ctr = 0
 

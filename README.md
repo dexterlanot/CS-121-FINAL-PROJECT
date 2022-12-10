@@ -19,7 +19,7 @@ The group evaluated the system using the provided grading rubric, which resulted
 
 | Metric             	| 4 	| 3 	| 2 	| 1 	|
 |--------------------	|---	|---	|---	|---	|
-| Code Reusability   	|   	|   	| ✔ 	|   	|
+| Code Reusability   	|   	|    	| ✔     |   	|
 | Maintainability    	|   	| ✔ 	|   	|   	|
 | Scalability        	| ✔ 	|   	|   	|   	|
 | Execution          	|   	| ✔ 	|   	|   	|
@@ -35,7 +35,8 @@ Because of the current demand for instant coffee or tea, the programmers decided
 ## Prerequisites
 Make sure you have installed maskpass before you use the system.
 
- - Maskpass is a Python library like getpass but with advanced features like masking and reveal/un-reveal. https://pypi.org/project/maskpass/
+ - [Maskpass](https://pypi.org/project/maskpass/) is a Python library like getpass but with advanced features like masking and reveal/un-reveal. 
+
 
 ### Installation
 Use the package manager pip to install maskpass.
@@ -43,8 +44,10 @@ Use the package manager pip to install maskpass.
 ```
 pip install maskpass
 ```
+# Video Demo
 
 # General Information
+
 ### Admin Interface
 
 An employee must input the admin password to gain access to the admin interface. After verification, each staff (Manager, Barista, Service crew, and Cashier) should log in to open the store system for client interaction. The system will only be available for customers when all of the employees have logged in.
@@ -53,6 +56,7 @@ An employee must input the admin password to gain access to the admin interface.
 
 This interface includes the ordering system and the billing system. Customers can add orders and pay the bill associated with their orders. And a reciept will be generated right after a successful transaction. Also, customer can cancel their order if they wanted to.
 
-## UML Diagram
+# UML Diagram
+![Diagram](images/CSMS-UML.png "UML Diagram")
 
-## Video Demo and Explanation
+
