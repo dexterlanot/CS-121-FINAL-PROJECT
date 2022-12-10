@@ -2,8 +2,8 @@ import Employees
 from Customer import *
 import OrderingSystem
 
-class CoffeeShop:
 
+class CoffeeShop:
 
     def show_main_menu():
         global admin
@@ -15,7 +15,7 @@ class CoffeeShop:
             print('\n' + "-"*60)
             print("\t  ⛾  COFFEE SHOP MANAGEMENT SYSTEM ⛾")
             print("-"*60)
-            print('\033[1m',"\t\t☕︎☕︎☕︎ JYIW CAFE ☕︎☕︎☕︎", '\033[0m')
+            print('\033[1m', "\t\t☕︎☕︎☕︎ JYIW CAFE ☕︎☕︎☕︎", '\033[0m')
             print("-"*60)
             print("[1] - Admin")
             print("[2] - Customer")
@@ -23,27 +23,28 @@ class CoffeeShop:
             print("[4] - Exit")
             print("-"*60)
 
-
-            try: choice = int(input("Enter your choice -> "))
+            try:
+                choice = int(input("Enter your choice -> "))
             except ValueError:
                 print("Invalid input!")
                 continue
-                
+
             if choice == 1:
                 admin = Employees.Employee()
                 admin.show_admin_menu()
                 ctr = ctr + 1
             elif choice == 2:
                 if ctr == 0:
-                    print("\n-----The shop is still closed. Please come back later.------")
+                    print(
+                        "\n-----The shop is still closed. Please come back later.------")
                 else:
                     customer = Customer()
-                    #customer.introduce()
                     customer.customer_menu()
-                
+
             elif choice == 3:
                 if ctr == 0:
-                    print("\n-----The shop is still closed. Please come back later.------")
+                    print(
+                        "\n-----The shop is still closed. Please come back later.------")
                 else:
                     order = OrderingSystem.Order()
                     order.print_shop_menu()
