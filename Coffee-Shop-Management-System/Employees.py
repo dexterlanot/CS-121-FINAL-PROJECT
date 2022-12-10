@@ -1,4 +1,5 @@
 import json
+import maskpass
 import BillingSystem
 
 class Employee:
@@ -14,14 +15,14 @@ class Employee:
         try:
             print("-"*60)
             self.emp_id = input("Enter login ID: ")
-            self.password = input("Enter your password: ")
+            self.password = maskpass.advpass(prompt="Enter password: ", mask='*')
 
             with open('emp_details.json') as json_file:
                 emp_login_details = json.load(json_file)
 
             if self.emp_id in emp_login_details[self.emp_id]["Employee ID"]:
                 if self.password in emp_login_details[self.emp_id]["Password"]:
-                    print("You are now logged in!")
+                    print("Successful! You are now logged in!\n")
             else:
                 print("You are not logged in!")
 
@@ -37,9 +38,9 @@ class Employee:
     def show_admin_menu(self):
         ctr = 0
         
-        self.admin_pass = input("Enter admin password: ")
+        self.admin_pass = maskpass.advpass(prompt="Enter admin password: ", mask='*')
         
-        if self.admin_pass == "jyiwcafe":
+        if self.admin_pass == "lifebeginsaftercoffee":
             while True:
                 print("-"*60)
                 print("\t\t☕︎☕︎☕︎ JYIW CAFE ☕︎☕︎☕︎")
@@ -50,7 +51,8 @@ class Employee:
                 print("[2] - Barista")
                 print("[3] - Service crew")
                 print("[4] - Cashier")
-                print("[5] - Exit")
+                print("[5] - View Employee Data")
+                print("[6] - Exit")
                 print("-"*60)
 
                 try: choice = int(input("Enter you choice: "))
@@ -66,24 +68,50 @@ class Employee:
                 elif choice == 2:
                     barista = Barista()
                     barista.login()
-
+                    ctr = ctr + 1
                 elif choice == 3:
                     crew = ServiceCrew()
                     crew.login()
-
+                    ctr = ctr + 1
                 elif choice == 4:
                     cashier = Cashier()
                     cashier.login()
-
+                    ctr = ctr + 1
                 elif choice == 5:
-                    print("Shop is now open!")             
-                    break
+                    emp = Employee()
+                    emp.print_emp_record()
+
+                elif choice == 6:
+                    if ctr == 4:
+                        print("Shop is now open!")             
+                        break
+                    else:
+                        print('\n')
+                        print('\033[1m'+("!"*60)+'\033[0m')
+                        print('\033[1m'+"All employees are required to login before opening the shop!"+'\033[0m')
+                        print('\033[1m'+("!"*60)+'\033[0m')
+                        print('\n')
                 
                 else:
                     print("Invalid input!")
         else:
             print("Invalid password! Please enter the correct password.")
             pass
+
+    def print_emp_record(self):
+        with open('emp_details.json', 'r') as openfile:
+            json_object = json.load(openfile)
+        print('\n')
+        self.emp_id = input("Enter Employee ID: ")
+        print('\033[1m',"\t\t☕︎☕︎☕︎ JYIW CAFE ☕︎☕︎☕︎", '\033[0m')
+        print("\n---------------------- EMPLOYEE RECORD ---------------------")
+        print("Employee ID: \t", json_object[self.emp_id]["Employee ID"])
+        print("Name: \t\t", json_object[self.emp_id]["Name"])
+        print("Job: \t\t", json_object[self.emp_id]["Job"])
+        print("Age: \t\t", json_object[self.emp_id]["Age"])
+        print("Gender: \t", json_object[self.emp_id]["Gender"])
+        print("Contact Number: ", json_object[self.emp_id]["Contact Number"])
+        print('\n')
 
 class Manager(Employee):
     def __init__(self):
