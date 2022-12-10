@@ -71,25 +71,31 @@ class Order:
         try:
             self.choice = int(input("Your order is: "))
         except ValueError:
-            print("Invalid input!")
+            print("Invalid input!\n")
         print("-"*60)
         self.order_product = self.shop_products["Hot Coffee"][self.choice-1]
         print("\nYou selected",
               self.shop_products["Hot Coffee"][self.choice-1])
         self.to_pay = 0
         self.coffee_choice = 0
-        self.coffee_choice = int(input("What size do you want? [1] Small or [2] Large -> "))
+        try: self.coffee_choice = int(input("What size do you want? [1] Small or [2] Large -> "))
+        except ValueError:
+            print("Invalid input!\n")
 
         if self.coffee_choice == 1:
             self.size = Size.SMALL.value
             print("You selected", Size.SMALL.value)
-            self.quantity = int(input("Quantity: "))
+            try: self.quantity = int(input("Quantity: "))
+            except ValueError:
+                print("Invalid input!\n")
             self.to_pay = self.quantity*Price.SMALL.value
 
         elif self.coffee_choice == 2:
             self.size = Size.LARGE.value
             print("You selected", Size.LARGE.value)
-            self.quantity = int(input("Quantity: "))
+            try: self.quantity = int(input("Quantity: "))
+            except ValueError:
+                print("Invalid input!\n")
             self.to_pay = self.quantity*Price.LARGE.value
         else:
             print("Invalid input!")
@@ -119,18 +125,24 @@ class Order:
               self.shop_products["Cold Coffee"][self.choice-1])
         self.to_pay = 0
         self.coffee_choice = 0
-        self.coffee_choice = int(input("What size do you want? [1] Small or [2] Large -> "))
+        try: self.coffee_choice = int(input("What size do you want? [1] Small or [2] Large -> "))
+        except ValueError:
+            print("Invalid input!\n")
 
         if self.coffee_choice == 1:
             self.size = Size.SMALL.value
             print("You selected", Size.SMALL.value)
-            self.quantity = int(input("Quantity: "))
+            try: self.quantity = int(input("Quantity: "))
+            except ValueError:
+                print("Invalid input!\n")
             self.to_pay = self.quantity*Price.SMALL.value
 
         elif self.coffee_choice == 2:
             self.size = Size.LARGE.value
             print("You selected", Size.LARGE.value)
-            self.quantity = int(input("Quantity: "))
+            try: self.quantity = int(input("Quantity: "))
+            except ValueError:
+                print("Invalid input!\n")
             self.to_pay = self.quantity*Price.LARGE.value
         else:
             print("Invalid input!")
@@ -161,19 +173,24 @@ class Order:
         print("\nYou selected", self.shop_products["Milk Tea"][self.choice-1])
         self.to_pay = 0
         self.coffee_choice = 0
-        self.coffee_choice = int(
-            input("What size do you want? [1] Small or [2] Large -> "))
+        try: self.coffee_choice = int(input("What size do you want? [1] Small or [2] Large -> "))
+        except ValueError:
+            print("Invalid input!\n")
 
         if self.coffee_choice == 1:
             self.size = Size.SMALL.value
             print("You selected", Size.SMALL.value)
-            self.quantity = int(input("Quantity: "))
+            try: self.quantity = int(input("Quantity: "))
+            except ValueError:
+                print("Invalid input!\n")
             self.to_pay = self.quantity*Price.SMALL.value
 
         elif self.coffee_choice == 2:
             self.size = Size.LARGE.value
             print("You selected", Size.LARGE.value)
-            self.quantity = int(input("Quantity: "))
+            try: self.quantity = int(input("Quantity: "))
+            except ValueError:
+                print("Invalid input!\n")
             self.to_pay = self.quantity*Price.LARGE.value
         else:
             print("Invalid input!")
@@ -220,7 +237,9 @@ class Order:
             barista = Employees.Barista()
             crew = Employees.ServiceCrew()
             while True:
-                self.more_order = int(input("Do you want to order more? [1] Yes, [2] No -> "))
+                try: self.more_order = int(input("Do you want to order more? [1] Yes, [2] No -> "))
+                except ValueError:
+                    print("Invalid input!")
                 if self.more_order == 1:
                     break
                 elif self.more_order == 2:

@@ -49,7 +49,11 @@ class CoffeeShop:
                     order = OrderingSystem.Order()
                     order.print_shop_menu()
                     print("-"*60)
-                    customer_decision = int(input("\nHave you decided what to order? [1] Yes or [2] No -> "))
+                    try:
+                        customer_decision = int(
+                            input("\nHave you decided what to order? [1] Yes or [2] No -> "))
+                    except ValueError:
+                        print("Invalid input!\n")
                     if customer_decision == 1:
                         print("--> \"You may take your order now\" ")
                         pass

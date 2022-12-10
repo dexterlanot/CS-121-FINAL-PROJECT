@@ -8,11 +8,17 @@ class Customer:
         pass
 
     def customer_name_input(self):
-        self.name = input("\nWhat is your name? -> ")
+        try:
+            self.name = input("\nWhat is your name? -> ")
+        except ValueError:
+            print("Invalid input!\n")
         return self.name
 
     def pay(self):
-        self.c_money = int(input("Enter amount to pay: "))
+        try:
+            self.c_money = int(input("Enter amount to pay: "))
+        except ValueError:
+            print("Invalid input!\n")
         return self.c_money
 
     def customer_menu(self):
@@ -48,15 +54,19 @@ class Customer:
             elif do == 3:
                 order = Order()
                 order.print_orders()
-                self.cancel = int(input("Do you want to cancel your orders? \n[1] Yes, [2] No -> "))
+                try:
+                    self.cancel = int(
+                        input("Do you want to cancel your orders? \n[1] Yes, [2] No -> "))
+                except ValueError:
+                    print("Invalid input!\n")
                 if self.cancel == 1:
-                    order.clear_orders();
+                    order.clear_orders()
                     print("Your order/s are now cancelled...\n")
                 elif self.cancel == 2:
                     print("Proceed to paying your order bill...\n")
                     pass
             elif do == 4:
-                order.clear_orders();
+                order.clear_orders()
                 break
             else:
                 print("Invalid input!")

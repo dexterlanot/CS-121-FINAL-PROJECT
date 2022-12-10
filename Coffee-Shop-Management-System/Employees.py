@@ -13,8 +13,9 @@ class Employee:
         self.password = ""
 
     def login(self):
+
+        print("-"*60)
         try:
-            print("-"*60)
             self.emp_id = input("\nEnter login ID: ")
             self.password = maskpass.advpass(
                 prompt="Enter password: ", mask='*')
@@ -37,7 +38,6 @@ class Employee:
 
     def introduce(self):
         print(f"My name is {self.name}.")
-    
 
     def show_admin_menu(self):
         ctr = 0
@@ -99,7 +99,8 @@ class Employee:
                     else:
                         print('\n')
                         print('\033[1m'+("!"*60)+'\033[0m')
-                        print('\033[1m'+"All employees are required to login before opening the shop!"+'\033[0m')
+                        print(
+                            '\033[1m'+"All employees are required to login before opening the shop!"+'\033[0m')
                         print('\033[1m'+("!"*60)+'\033[0m')
                         print('\n')
                 elif choice == 6:
@@ -115,7 +116,8 @@ class Employee:
             with open('emp_details.json', 'r') as openfile:
                 json_file = json.load(openfile)
             print()
-            try: self.emp_id = input("Enter Employee ID: ")
+            try:
+                self.emp_id = input("Enter Employee ID: ")
             except KeyError:
                 break
             if self.emp_id in json_file:
@@ -126,11 +128,13 @@ class Employee:
                 print("Job: \t\t", json_file[self.emp_id]["Job"])
                 print("Age: \t\t", json_file[self.emp_id]["Age"])
                 print("Gender: \t", json_file[self.emp_id]["Gender"])
-                print("Contact Number: ", json_file[self.emp_id]["Contact Number"])
+                print("Contact Number: ",
+                      json_file[self.emp_id]["Contact Number"])
                 print('\n')
                 break
             else:
-                print('\033[1m'+"Invalid Employee ID! Employee record not found."+'\033[0m')
+                print(
+                    '\033[1m'+"Invalid Employee ID! Employee record not found."+'\033[0m')
                 break
 
 
@@ -148,10 +152,11 @@ class Manager(Employee):
             print("[3] - View order records")
             print("[4] - Exit")
             print("-"*60)
-            
-            try: self.manager_choice = int(input("Enter your choice: "))
+
+            try:
+                self.manager_choice = int(input("Enter your choice: "))
             except ValueError:
-                print ("Invalid input!")
+                print("Invalid input!")
                 continue
 
             if self.manager_choice == 1:
@@ -167,9 +172,10 @@ class Manager(Employee):
                     print('\033[1m'+"You must login first!"+'\033[0m')
             elif self.manager_choice == 3:
                 if menu_ctr >= 1:
-                    order_records = open("order_record.txt","r+")
+                    order_records = open("order_record.txt", "r+")
                     print('\033[1m', "\n\t\t☕︎☕︎☕︎ JYIW CAFE ☕︎☕︎☕︎", '\033[0m')
-                    print("\n----------------------- ORDER RECORD -----------------------\n")
+                    print(
+                        "\n----------------------- ORDER RECORD -----------------------\n")
                     print(order_records.read())
                 else:
                     print('\033[1m'+"You must login first!"+'\033[0m')
@@ -229,4 +235,3 @@ class Cashier(Employee):
 
     def get_payment(self):
         billing.payment_and_billing()
-    

@@ -9,7 +9,7 @@ class Billing:
 
     def __init__(self):
         pass
-    
+
     def customer_money(self):
         self.c_money = 0
         self.c_money = customer.pay()
@@ -19,13 +19,13 @@ class Billing:
         bill = Billing()
         while True:
             order.print_orders
-            
+
             if order.total_amount() == 0:
-                print ("You don't have any orders.\n")
+                print("You don't have any orders.\n")
                 break
             else:
                 print(f"Total amount to be paid: {order.total_amount()}")
-                #bill.customer_money()
+                # bill.customer_money()
                 bill.total_payment()
                 bill.print_reciept()
                 break
@@ -40,7 +40,7 @@ class Billing:
             self.total_to_pay = self.total_to_pay + order.total_amount()
             self.change = 0
             self.change = self.payment - self.total_to_pay
-            print (f"Your change is P {self.change}")
+            print(f"Your change is P {self.change}")
 
     def print_reciept(self):
         customer.customer_name_input()
