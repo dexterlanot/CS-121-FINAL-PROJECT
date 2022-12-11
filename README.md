@@ -30,7 +30,7 @@ The group evaluated the system using the provided grading rubric, which resulted
 
 Because of the current demand for instant coffee or tea, the programmers decided to develop a shopping business system that is related to the shop's day-to-day operations. The Python programming language and Object-Oriented Programming (OOP) concepts were used to create this system. In software, classes and objects and inheritance are used specifically. Furthermore, the programmers used JSON to store employee data, which is retrieved upon logging in, and file handling to keep track of each shop order.
 
-## Prerequisites
+## Pre-requisites
 Make sure you have installed maskpass before you use the system.
 
  - [Maskpass](https://pypi.org/project/maskpass/) is a Python library like getpass but with advanced features like masking and reveal/un-reveal. 
