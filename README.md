@@ -1,16 +1,16 @@
-### CS-121-FINAL-PROJECT
+# Coffee Shop Management System
 
-Final Project in CS 121 - Advanced Computer Programming
- - Instructor: Dr. Francis Jesmar P. Montalbo
+Final Project in **CS 121 - Advanced Computer Programming**   
+Instructor: Dr. Francis Jesmar P. Montalbo
 
 **Group Members**
- - Ilao, Whayne Darlyne |
+ - Ilao, Whayne Darlyne R. -
 [@whayneilao](https://www.github.com/whayneilao)
- - Lagajeno, Yeleina |
+ - Lagajeno, Yeleina P. -
 [@Yeleina](https://www.github.com/Yeleina)
- - Lanot, John Dexter |
+ - Lanot, John Dexter R. -
 [@dexterlanot](https://www.github.com/dexterlanot)
- - Pagcaliwagan, Ivy Nicole |
+ - Pagcaliwagan, Ivy Nicole M. -
 [@ivynicole](https://www.github.com/ivynicole)
 
 ## Self Assesment
@@ -24,9 +24,7 @@ The group evaluated the system using the provided grading rubric, which resulted
 | Scalability        	| ✔ 	|   	|   	|   	|
 | Execution          	|   	| ✔ 	|   	|   	|
 | Originality        	| ✔ 	|   	|   	|   	|
-| Overall Impression 	| ✔ 	|   	|   	|   	|
-
-# Coffee Shop Management System
+| Overall Impression 	|    	| ✔  	|   	|   	|
 
 ## Project Overview
 
@@ -45,6 +43,10 @@ Use the package manager pip to install maskpass.
 pip install maskpass
 ```
 # Video Demo
+
+The video includes a code breakdown as well as an output demonstration. [**Click here**](https://youtu.be/sy2JWudIQ9I) or click the video thumbnail below to watch the video presentation.
+
+[![Video](https://img.youtube.com/vi/sy2JWudIQ9I/maxresdefault.jpg)](https://youtu.be/sy2JWudIQ9I)
 
 # General Information
 
@@ -122,7 +124,7 @@ When this option is selected, the total amount to be paid by the customer is dis
 
 * Cancel order
 
-When this option is selected, the system will ask the customer to verify if he or she wants to cancel the order. If yes, the system will remove the customer's order from the queue otherwise the system will display a message **Proceed to paying your order bill...**.
+When this option is selected, the system will ask the customer to verify if he or she wants to cancel the order. If yes, the system will remove the customer's order from the queue otherwise the system will display a message *"Proceed to paying your order bill..."*.
 
 # Conclusion
 

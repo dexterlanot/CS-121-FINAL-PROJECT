@@ -4,7 +4,7 @@ import BillingSystem
 
 
 class Employee:
-    global emp_login_details, billing
+    global emp_login_details, billing, menu_ctr
     emp_login_details = {}
     billing = BillingSystem.Billing()
 
@@ -140,6 +140,7 @@ class Manager(Employee):
         pass
 
     def manager_menu(self):
+        self.menu_ctr = 0
         while True:
             emp = Employee()
             manager = Manager()
@@ -155,20 +156,18 @@ class Manager(Employee):
             except ValueError:
                 print("Invalid input!")
                 continue
-
             if self.manager_choice == 1:
-                menu_ctr = 0
                 if manager.login() == True:
-                    menu_ctr = menu_ctr + 2
+                    self.menu_ctr = self.menu_ctr + 2
                 else:
-                    menu_ctr = menu_ctr - 1
+                    self.menu_ctr = self.menu_ctr - 1
             elif self.manager_choice == 2:
-                if menu_ctr >= 1:
+                if self.menu_ctr >= 1:
                     emp.print_emp_record()
                 else:
                     print('\033[1m'+"You must login first!"+'\033[0m')
             elif self.manager_choice == 3:
-                if menu_ctr >= 1:
+                if self.menu_ctr >= 1:
                     order_records = open("order_record.txt", "r+")
                     print('\033[1m', "\n\t\t☕︎☕︎☕︎ JYIW CAFE ☕︎☕︎☕︎", '\033[0m')
                     print(

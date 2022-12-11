@@ -25,7 +25,6 @@ class Billing:
                 break
             else:
                 print(f"Total amount to be paid: {order.total_amount()}")
-                # bill.customer_money()
                 bill.total_payment()
                 bill.print_reciept()
                 break
