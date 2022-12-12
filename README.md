@@ -26,6 +26,8 @@ The group evaluated the system using the provided grading rubric, which resulted
 | Originality        	| ✔ 	|   	|   	|   	|
 | Overall Impression 	|    	| ✔  	|   	|   	|
 
+**Total: 19 points**
+
 ## Project Overview
 
 Because of the current demand for instant coffee or tea, the programmers decided to develop a shopping business system that is related to the shop's day-to-day operations. The Python programming language and Object-Oriented Programming (OOP) concepts were used to create this system. In software, classes and objects and inheritance are used specifically. Furthermore, the programmers used JSON to store employee data, which is retrieved upon logging in, and file handling to keep track of each shop order.
