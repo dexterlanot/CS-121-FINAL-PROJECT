@@ -44,7 +44,7 @@ pip install maskpass
 ```
 # Video Demo
 
-The video includes a code breakdown as well as an output demonstration. [**Click here**](https://youtu.be/sy2JWudIQ9I) or click the video thumbnail below to watch the video presentation.
+The video includes a code breakdown as well as an output demonstration. [**Click here**](https://youtu.be/sy2JWudIQ9I) or click the video thumbnail below to watch the video presentation. Time stamps are added to the video description.
 
 [![Video](https://img.youtube.com/vi/sy2JWudIQ9I/maxresdefault.jpg)](https://youtu.be/sy2JWudIQ9I)
 
